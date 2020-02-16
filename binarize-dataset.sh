@@ -4,7 +4,7 @@ fairseq-preprocess \
   --source-lang "src" \
   --target-lang "tgt" \
   --trainpref "$DATA_PATH/train.bpe" \
-  --validpref "$DATA_PATH/val.bpe" \
+  --validpref "$DATA_PATH/dev.bpe" \
   --destdir "$DATA_PATH/cnn_dm-bin/" \
   --workers 60 \
   --srcdict dict.txt \
