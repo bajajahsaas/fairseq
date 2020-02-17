@@ -16,10 +16,10 @@ MAX_TOKENS=2048
 UPDATE_FREQ=4
 BART_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/models/bart.large/model.pt
 PROCESSED_DATA_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/data/cnn-for-bart/cnn_dm-bin
-SAVE_DIR=/mnt/nfs/work1/696ds-s20/abajaj/cnn-finetune
+SAVE_DIR=/mnt/nfs/work1/696ds-s20/abajaj/cnn-finetune/checkpoints
 
 python train.py $PROCESSED_DATA_PATH \
-    --save_dir $SAVE_DIR \
+    --save-dir $SAVE_DIR \
     --restore-file $BART_PATH \
     --max-tokens $MAX_TOKENS \
     --task translation \
