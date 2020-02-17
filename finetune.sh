@@ -3,9 +3,9 @@
 #SBATCH --job-name=finetune-bart
 #SBATCH --output=logsfinetunebart/bart_%j.txt  # output file
 #SBATCH -e logsfinetunebart/bart_%j.err        # File to which STDERR will be written
-#SBATCH --gres=gpu:3
+#SBATCH --gres=gpu:1
 #SBATCH --partition=2080ti-long # Partition to submit to
-#SBATCH --mem=40G
+#SBATCH --mem=50GB
 #
 #SBATCH --ntasks=1
 
