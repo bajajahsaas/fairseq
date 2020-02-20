@@ -15,7 +15,7 @@ LR=3e-05
 MAX_TOKENS=2048
 UPDATE_FREQ=4
 BART_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/models/bart.large/model.pt
-PROCESSED_DATA_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/data/cnn-for-bart/cnn_dm-bin
+PROCESSED_DATA_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/data/cnn-for-bart/data-bin
 SAVE_DIR=/mnt/nfs/work1/696ds-s20/abajaj/cnn-finetune/checkpoints
 
 python train.py $PROCESSED_DATA_PATH \
