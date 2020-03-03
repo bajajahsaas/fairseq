@@ -4,7 +4,7 @@
 
 export DATA_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/data/gs_data_full/beige_books_rev/splits
 
-for SPLIT in train
+for SPLIT in train dev
 do
   for LANG in src tgt
   do
