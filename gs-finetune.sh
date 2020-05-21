@@ -11,12 +11,12 @@
 
 TOTAL_NUM_UPDATES=20000
 WARMUP_UPDATES=500
-LR=3e-05
+LR=5e-06
 MAX_TOKENS=2048
 UPDATE_FREQ=4
 BART_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/models/bart.large.cnn/model.pt
-PROCESSED_DATA_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/data/gs_data_full/beige_books_rev/splits/data-bin
-SAVE_DIR=/mnt/nfs/work1/696ds-s20/abajaj/gs-finetune/checkpoints
+PROCESSED_DATA_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/data/gs/amicus/src-tgt/data-bin
+SAVE_DIR=/mnt/nfs/work1/696ds-s20/abajaj/gs-finetune/amicus/checkpoints
 
 python train.py $PROCESSED_DATA_PATH \
     --save-dir $SAVE_DIR \
@@ -39,4 +39,6 @@ python train.py $PROCESSED_DATA_PATH \
     --lr-scheduler polynomial_decay --lr $LR --total-num-update $TOTAL_NUM_UPDATES --warmup-updates $WARMUP_UPDATES \
     --fp16 --update-freq $UPDATE_FREQ \
     --skip-invalid-size-inputs-valid-test \
-    --find-unused-parameters;
+    --find-unused-parameters \
+    --patience 20 \
+    --max-epoch 50 --no-epoch-checkpoints;
