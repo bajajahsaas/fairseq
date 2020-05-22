@@ -43,4 +43,4 @@ python train.py $PROCESSED_DATA_PATH \
     --skip-invalid-size-inputs-valid-test \
     --find-unused-parameters \
     --patience 20 \
-    --max-epoch 50 --no-epoch-checkpoints;
+    --max-epoch 500 --no-epoch-checkpoints;
