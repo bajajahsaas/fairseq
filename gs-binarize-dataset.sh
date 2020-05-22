@@ -1,4 +1,6 @@
-export DATA_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/data/gs/amicus/src-tgt
+DATASET=amicus
+
+export DATA_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/data/gs/${DATASET}/src-tgt
 
 fairseq-preprocess \
   --source-lang "src" \

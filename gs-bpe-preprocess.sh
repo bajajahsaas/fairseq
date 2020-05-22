@@ -2,7 +2,9 @@
 #wget -N 'https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/vocab.bpe'
 #wget -N 'https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/dict.txt'
 
-export DATA_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/data/gs/amicus/src-tgt
+DATASET=amicus
+
+export DATA_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/data/gs/${DATASET}/src-tgt
 
 for SPLIT in train dev
 do
