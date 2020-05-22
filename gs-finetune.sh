@@ -13,7 +13,7 @@ DATASET=amicus
 
 TOTAL_NUM_UPDATES=20000
 WARMUP_UPDATES=500
-LR=5e-06
+LR=3e-05
 MAX_TOKENS=2048
 UPDATE_FREQ=4
 BART_PATH=/mnt/nfs/work1/mccallum/abajaj/gs-summ/models/bart.large.cnn/model.pt
